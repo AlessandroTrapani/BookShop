@@ -11,7 +11,7 @@ public class DettaglioOrdine {
     private int id;
     private int idOrdine;
     private int idProdotto;
-    private String nomeProdotto;
+    private String titoloProdotto;
     private double prezzo;
     private int quantita;
 
@@ -43,12 +43,12 @@ public class DettaglioOrdine {
     }
 
 
-    public String getNomeProdotto() {
-        return nomeProdotto;
+    public String getTitoloProdotto() {
+        return titoloProdotto;
     }
 
-    public void setNomeProdotto(String nomeProdotto) {
-        this.nomeProdotto = nomeProdotto;
+    public void setTitoloProdotto(String titoloProdotto) {
+        this.titoloProdotto = titoloProdotto;
     }
 
     public double getPrezzo() {
