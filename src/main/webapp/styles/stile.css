@@ -1,0 +1,222 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f1ed;
+    color: #222;
+}
+
+.contenitore {
+    width: 90%;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.intestazione-sito {
+    background-color: #2f2a26;
+    color: white;
+    padding: 16px 0;
+}
+
+.menu-principale a {
+    color: white;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+.menu-principale a:hover {
+    text-decoration: underline;
+}
+
+.contenuto-pagina {
+    padding: 30px 0;
+}
+
+.bottone {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #7c4a2d;
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.bottone:hover {
+    background-color: #5f3822;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    max-width: 350px;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+}
+
+.griglia-prodotti {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.card-prodotto {
+    background-color: white;
+    border: 1px solid #d6d1ca;
+    padding: 16px;
+}
+
+.card-prodotto h3 {
+    margin-top: 0;
+}
+
+.immagine-card-prodotto {
+    width: 100%;
+    max-width: 220px;
+    height: 220px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px auto;
+}
+
+.dettaglio-prodotto {
+    background-color: white;
+    border: 1px solid #d6d1ca;
+    padding: 20px;
+}
+
+.immagine-prodotto {
+    width: 100%;
+    max-width: 350px;
+    height: 350px;
+    object-fit: contain;
+    background-color: white;
+    border: 1px solid #d6d1ca;
+    padding: 12px;
+}
+
+.informazioni-prodotto {
+    margin-top: 10px;
+}
+
+.messaggio-errore-form {
+    color: #991b1b;
+    font-size: 14px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+#sezione-libro {
+    background-color: white;
+    border: 1px solid #d6d1ca;
+    padding: 16px;
+    margin-top: 12px;
+    margin-bottom: 16px;
+}
+
+.input-errore {
+    border: 1px solid #991b1b;
+}
+
+.messaggio-errore {
+    color: #991b1b;
+    background-color: #fee2e2;
+    border: 1px solid #fecaca;
+    padding: 10px;
+    margin-bottom: 16px;
+}
+
+.messaggio-successo {
+    color: #14532d;
+    background-color: #dcfce7;
+    border: 1px solid #bbf7d0;
+    padding: 10px;
+    margin-bottom: 16px;
+}
+
+.box-info {
+    background-color: white;
+    border: 1px solid #d6d1ca;
+    padding: 16px;
+    margin-top: 24px;
+}
+
+.tabella-carrello {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.tabella-carrello th,
+.tabella-carrello td {
+    border: 1px solid #d6d1ca;
+    padding: 10px;
+    text-align: left;
+}
+
+.tabella-carrello th {
+    background-color: #ebe7e1;
+}
+
+.tabella-carrello form {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .contenitore {
+        width: 95%;
+    }
+
+    .menu-principale a {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+
+    .contenuto-pagina {
+        padding: 20px 0;
+    }
+
+    input,
+    select,
+    textarea {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .intestazione-sito h1 {
+        font-size: 24px;
+    }
+
+    .bottone {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
+    .griglia-prodotti {
+        grid-template-columns: 1fr;
+    }
+
+    .tabella-carrello {
+        display: block;
+        overflow-x: auto;
+    }
+}
