@@ -12,13 +12,6 @@ import model.ElementoCarrello;
 import model.Ordine;
 import util.ConnessioneDatabase;
 
-/**
- * DAO dedicato alla gestione degli ordini.
- *
- * La classe contiene i metodi necessari per salvare un ordine,
- * recuperare gli ordini di un utente, recuperare gli ordini lato admin
- * e aggiornare lo stato di un ordine.
- */
 public class OrdineDAO {
 
     public boolean salvaOrdine(Ordine ordine, Carrello carrello) {

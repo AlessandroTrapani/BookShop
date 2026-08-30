@@ -2,12 +2,6 @@ package model;
 
 import java.sql.Timestamp;
 
-/**
- * Classe che rappresenta un utente registrato su BookShop.
- * 
- * Ogni oggetto Utente corrisponde a un record della tabella utenti
- * del database.
- */
 public class Utente {
 
     private int id;

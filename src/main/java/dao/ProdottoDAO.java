@@ -9,10 +9,6 @@ import java.util.ArrayList;
 import model.Prodotto;
 import util.ConnessioneDatabase;
 
-/**
- * DAO dedicato alla gestione dei prodotti.
- * Contiene le query SQL sulla tabella prodotti.
- */
 public class ProdottoDAO {
 
     public ArrayList<Prodotto> cercaProdotti(String ricerca, String autore, String categoria) {

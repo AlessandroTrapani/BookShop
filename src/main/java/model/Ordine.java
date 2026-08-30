@@ -3,12 +3,6 @@ package model;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 
-/**
- * Classe model che rappresenta un ordine effettuato da un utente.
- * 
- * Ogni oggetto Ordine corrisponde a un record della tabella ordini.
- * Contiene anche una lista di DettaglioOrdine, cioè i prodotti acquistati.
- */
 public class Ordine {
 
     private int id;

@@ -2,12 +2,6 @@ package model;
 
 import java.util.ArrayList;
 
-/**
- * Classe model che rappresenta il carrello dell'utente.
- * 
- * Il carrello viene salvato in sessione e contiene una lista di elementi.
- * Ogni elemento contiene un prodotto e la relativa quantità.
- */
 public class Carrello {
 
     private ArrayList<ElementoCarrello> elementi;

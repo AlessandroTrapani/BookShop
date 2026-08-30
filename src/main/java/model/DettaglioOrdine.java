@@ -1,11 +1,5 @@
 package model;
 
-/**
- * Classe model che rappresenta una riga di dettaglio di un ordine.
- * 
- * Ogni oggetto DettaglioOrdine corrisponde a un record della tabella
- * dettagli_ordine e rappresenta un prodotto acquistato in un ordine.
- */
 public class DettaglioOrdine {
 
     private int id;

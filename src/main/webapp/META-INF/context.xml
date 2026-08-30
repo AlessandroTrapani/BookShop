@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context>
 
-    <!--
-        DataSource del progetto Bookshop.
-        Verrà recuperato tramite JNDI dalla classe ConnessioneDatabase.
-    -->
     <Resource
         name="jdbc/bookshop"
         auth="Container"

@@ -2,12 +2,6 @@ package model;
 
 import java.sql.Timestamp;
 
-/**
- * Classe che rappresenta un prodotto venduto su BookShop.
- * 
- * Ogni oggetto Prodotto corrisponde a un record della tabella prodotti
- * del database.
- */
 public class Prodotto {
 
     private int id;

@@ -1,11 +1,5 @@
 package model;
 
-/**
- * Classe model che rappresenta una singola riga del carrello.
- * 
- * Ogni elemento del carrello contiene un prodotto e la quantità scelta
- * dall'utente.
- */
 public class ElementoCarrello {
 
     private Prodotto prodotto;
