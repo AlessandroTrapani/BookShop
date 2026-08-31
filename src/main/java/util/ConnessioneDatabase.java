@@ -7,11 +7,6 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-/**
- * Classe che gestisce il recupero delle connessioni al database.
- * 
- * I DAO usano questa classe per ottenere una connessione dal DataSource
- */
 public class ConnessioneDatabase {
 
 
