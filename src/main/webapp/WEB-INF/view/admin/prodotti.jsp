@@ -1,0 +1,118 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="model.Prodotto" %>
+<%@ page import="model.Utente" %>
+
+<%
+    ArrayList<Prodotto> prodotti = (ArrayList<Prodotto>) request.getAttribute("prodotti");
+    Utente utenteLoggato = (Utente) session.getAttribute("utenteLoggato");
+%>
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestione prodotti - BookShop</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/styles/stile.css">
+</head>
+<body>
+    <header class="intestazione-sito">
+        <div class="contenitore">
+            <h1>BookShop - Area Admin</h1>
+
+            <nav class="menu-principale">
+                <a href="${pageContext.request.contextPath}/admin/home">Dashboard</a>
+                <a href="${pageContext.request.contextPath}/admin/prodotti">Prodotti</a>
+                <a href="${pageContext.request.contextPath}/admin/ordini">Ordini</a>
+                <a href="${pageContext.request.contextPath}/logout">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenitore contenuto-pagina">
+
+        <h2>Gestione prodotti</h2>
+
+        <%
+            if (utenteLoggato != null) {
+        %>
+
+            <p>
+                Amministratore: <strong><%= utenteLoggato.getEmail() %></strong>
+            </p>
+
+        <%
+            }
+        %>
+
+        <a class="bottone" href="${pageContext.request.contextPath}/admin/nuovo-prodotto">
+            Nuovo prodotto
+        </a>
+
+        <hr>
+
+        <%
+            if (prodotti == null || prodotti.isEmpty()) {
+        %>
+
+            <p>Nessun prodotto presente.</p>
+
+        <%
+            } else {
+        %>
+
+            <table class="tabella-carrello">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Titolo</th>
+                        <th>Autore</th>
+                        <th>Categoria</th>
+                        <th>Prezzo</th>
+                        <th>Quantità</th>
+                        <th>Stato</th>
+                        <th>Azioni</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <%
+                        for (Prodotto prodotto : prodotti) {
+                    %>
+
+                        <tr>
+                            <td><%= prodotto.getId() %></td>
+                            <td><%= prodotto.getTitolo() %></td>
+                            <td><%= prodotto.getAutore() %></td>
+                            <td><%= prodotto.getCategoria() %></td>
+                            <td>€ <%= prodotto.getPrezzo() %></td>
+                            <td><%= prodotto.getQuantita() %></td>
+                            <td><%= prodotto.getStato() %></td>
+                            <td>
+                                <a class="bottone" href="${pageContext.request.contextPath}/admin/modifica-prodotto?id=<%= prodotto.getId() %>">
+                                    Modifica
+                                </a>
+
+                                <form method="post" action="${pageContext.request.contextPath}/admin/elimina-prodotto" style="display: inline;">
+                                    <input type="hidden" name="id" value="<%= prodotto.getId() %>">
+                                    <button class="bottone" type="submit">
+                                        Elimina
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+
+                    <%
+                        }
+                    %>
+
+                </tbody>
+            </table>
+
+        <%
+            }
+        %>
+
+    </main>
+</body>
+</html>
